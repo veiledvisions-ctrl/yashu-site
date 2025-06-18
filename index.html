@@ -1,240 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yashu</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-      :root {
-        --bg: #ffffff;
-        --text: #111111;
-        --accent: #000000;
-        --gray: #f5f5f5;
-        --font-serif: 'Playfair Display', serif;
-        --font-sans: 'Inter', sans-serif;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: var(--font-sans);
-        background-color: var(--bg);
-        color: var(--text);
-      }
-      header {
-        background: var(--bg);
-        text-align: center;
-        padding: 5rem 2rem 3rem;
-      }
-      header h1 {
-        font-family: var(--font-serif);
-        font-size: 4rem;
-        font-weight: 700;
-        letter-spacing: 2px;
-      }
-      header p {
-        font-size: 1.25rem;
-        margin-top: 1rem;
-        color: #666;
-      }
-      nav {
-        display: flex;
-        justify-content: center;
-        gap: 3rem;
-        background: var(--bg);
-        border-top: 1px solid #eee;
-        border-bottom: 1px solid #eee;
-        padding: 1rem;
-        font-family: var(--font-serif);
-      }
-      nav a {
-        color: var(--text);
-        text-decoration: none;
-        font-weight: 500;
-        transition: all 0.2s ease-in-out;
-      }
-      nav a:hover {
-        text-decoration: underline;
-      }
-      .hero {
-        background: url('https://source.unsplash.com/1600x900/?fashion,style') center/cover no-repeat;
-        height: 80vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-        text-align: center;
-        padding: 2rem;
-      }
-      .hero h2 {
-        font-size: 3rem;
-        font-family: var(--font-serif);
-        max-width: 700px;
-      }
-      .features {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        padding: 5rem 2rem;
-        background-color: var(--gray);
-      }
-      .feature {
-        background: white;
-        padding: 2rem;
-        border-radius: 0;
-        box-shadow: 0 0 0 rgba(0,0,0,0);
-        text-align: left;
-        border: 1px solid #eee;
-      }
-      .feature h3 {
-        font-family: var(--font-serif);
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-      }
-      .feature p {
-        color: #444;
-      }
-      .shop {
-        padding: 4rem 2rem;
-        background: var(--bg);
-        text-align: center;
-      }
-      .shop h2 {
-        font-family: var(--font-serif);
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-      }
-      .products {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 2rem;
-      }
-      .product {
-        border: 1px solid #eee;
-        padding: 1rem;
-        background: #fff;
-        text-align: left;
-      }
-      .product img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-      }
-      .product h3 {
-        font-size: 1.1rem;
-        margin-top: 0.75rem;
-      }
-      .product p {
-        font-size: 0.9rem;
-        color: #555;
-      }
-      .contact {
-        background: var(--gray);
-        padding: 4rem 2rem;
-        text-align: center;
-      }
-      .contact h2 {
-        font-family: var(--font-serif);
-        font-size: 2rem;
-        margin-bottom: 2rem;
-      }
-      .contact form {
-        max-width: 600px;
-        margin: 0 auto;
-        display: grid;
-        gap: 1rem;
-      }
-      .contact input,
-      .contact textarea {
-        padding: 1rem;
-        font-family: var(--font-sans);
-        font-size: 1rem;
-        border: 1px solid #ccc;
-      }
-      .contact button {
-        background: var(--accent);
-        color: white;
-        border: none;
-        padding: 1rem;
-        font-size: 1rem;
-        cursor: pointer;
-      }
-      .contact button:hover {
-        opacity: 0.9;
-      }
-      footer {
-        background: var(--bg);
-        color: #888;
-        text-align: center;
-        padding: 3rem 1rem;
-        font-size: 0.9rem;
-        border-top: 1px solid #eee;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>YASHU</h1>
-      <p>Style. Essence. Expression.</p>
-    </header>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#about">About</a>
-      <a href="#shop">Shop</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <section class="hero">
-      <h2>Where fashion meets spirit. Discover the essence of Yashu.</h2>
-    </section>
-    <section class="features">
-      <div class="feature">
-        <h3>Modern Aesthetic</h3>
-        <p>Clean lines, neutral palettes, and timeless pieces curated to express elegance and depth.</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yashu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --accent: #000000;
+      --gray: #f5f5f5;
+      --font-serif: 'Playfair Display', serif;
+      --font-sans: 'Inter', sans-serif;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background: var(--bg);
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+    }
+    header h1 {
+      font-family: var(--font-serif);
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      color: #666;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: var(--bg);
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      padding: 1rem;
+      font-family: var(--font-serif);
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .hero {
+      background: url('https://source.unsplash.com/1600x900/?cross,faith') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      font-family: var(--font-serif);
+      max-width: 700px;
+    }
+    .shop {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .shop h2 {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+    .product {
+      border: 1px solid #eee;
+      padding: 1rem;
+      background: #fff;
+      text-align: left;
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .product h3 {
+      font-size: 1.1rem;
+      margin-top: 0.75rem;
+    }
+    .product p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .contact {
+      background: var(--gray);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .contact h2 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .contact form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+    }
+    .contact input,
+    .contact textarea {
+      padding: 1rem;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      border: 1px solid #ccc;
+    }
+    .contact button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .contact button:hover {
+      opacity: 0.9;
+    }
+    footer {
+      background: var(--bg);
+      color: #888;
+      text-align: center;
+      padding: 3rem 1rem;
+      font-size: 0.9rem;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>YASHU</h1>
+    <p>Faith-Inspired Fashion</p>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section class="hero">
+    <h2>Wear Your Faith Boldly</h2>
+  </section>
+  <section class="shop" id="shop">
+    <h2>Our Collection</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://source.unsplash.com/400x500/?sweater,cross" alt="Faith Sweater">
+        <h3>Faith Knit Sweater</h3>
+        <p>ZAR 750</p>
       </div>
-      <div class="feature">
-        <h3>Conscious Craft</h3>
-        <p>Our pieces are designed with purpose — handmade, sustainable, and ethically sourced.</p>
+      <div class="product">
+        <img src="https://source.unsplash.com/400x500/?tshirt,verse" alt="Verse Tee">
+        <h3>Scripture Tee - John 3:16</h3>
+        <p>ZAR 320</p>
       </div>
-      <div class="feature">
-        <h3>Minimal. Iconic.</h3>
-        <p>Not just fashion — a language of presence. The Yashu collection is understated yet unforgettable.</p>
+      <div class="product">
+        <img src="https://source.unsplash.com/400x500/?joggers,christian" alt="Joggers">
+        <h3>Grace Joggers</h3>
+        <p>ZAR 680</p>
       </div>
-    </section>
-    <section class="shop" id="shop">
-      <h2>Shop the Collection</h2>
-      <div class="products">
-        <div class="product">
-          <img src="https://source.unsplash.com/400x500/?clothing,minimal" alt="Product 1">
-          <h3>Structured Linen Blazer</h3>
-          <p>$180</p>
-        </div>
-        <div class="product">
-          <img src="https://source.unsplash.com/400x500/?minimal,fashion" alt="Product 2">
-          <h3>Minimalist Cotton Shirt</h3>
-          <p>$90</p>
-        </div>
-        <div class="product">
-          <img src="https://source.unsplash.com/400x500/?style,monochrome" alt="Product 3">
-          <h3>Monochrome Relaxed Trousers</h3>
-          <p>$120</p>
-        </div>
+      <div class="product">
+        <img src="https://source.unsplash.com/400x500/?fashion,cross" alt="Cross Hoodie">
+        <h3>Cross Emblem Hoodie</h3>
+        <p>ZAR 890</p>
       </div>
-    </section>
-    <section class="contact" id="contact">
-      <h2>Contact Yashu</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-    <footer>
-      <p>&copy; 2025 Yashu. All rights reserved. | Follow us @yashu.official</p>
-    </footer>
-  </body>
+      <div class="product">
+        <img src="https://source.unsplash.com/400x500/?minimalist,faith" alt="Minimal Tee">
+        <h3>Minimal Faith Tee</h3>
+        <p>ZAR 290</p>
+      </div>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2025 YASHU | Christian Streetwear | All rights reserved.</p>
+  </footer>
+</body>
 </html>
